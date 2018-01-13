@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\M.Nakano\\AndroidStudioProjects\\VuforiaSamples-6-2-10\\app\\build\\intermediates\\res\\merged\\debug\\anim\\bottom_down.xml",
+        "source": "C:\\Users\\M.Nakano\\AndroidStudioProjects\\VuforiaSamples-6-2-10\\app\\src\\main\\res\\anim\\bottom_down.xml"
+    },
+    {
+        "merged": "C:\\Users\\M.Nakano\\AndroidStudioProjects\\VuforiaSamples-6-2-10\\app\\build\\intermediates\\res\\merged\\debug\\anim\\bottom_up.xml",
+        "source": "C:\\Users\\M.Nakano\\AndroidStudioProjects\\VuforiaSamples-6-2-10\\app\\src\\main\\res\\anim\\bottom_up.xml"
+    }
+]

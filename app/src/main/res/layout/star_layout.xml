@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="7dp"
+    android:gravity="left"
+    android:id="@+id/root_LinearLayout"
+    >
+
+    <com.vuforia.samples.VuforiaSamples.ui.CustomView.StarView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/star_1">
+
+    </com.vuforia.samples.VuforiaSamples.ui.CustomView.StarView>
+
+    <com.vuforia.samples.VuforiaSamples.ui.CustomView.StarView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/star_2">
+
+    </com.vuforia.samples.VuforiaSamples.ui.CustomView.StarView>
+
+    <com.vuforia.samples.VuforiaSamples.ui.CustomView.StarView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/star_3">
+
+    </com.vuforia.samples.VuforiaSamples.ui.CustomView.StarView>
+
+    <com.vuforia.samples.VuforiaSamples.ui.CustomView.StarView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/star_4">
+
+    </com.vuforia.samples.VuforiaSamples.ui.CustomView.StarView>
+
+    <com.vuforia.samples.VuforiaSamples.ui.CustomView.StarView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/star_5">
+
+    </com.vuforia.samples.VuforiaSamples.ui.CustomView.StarView>
+
+
+
+</LinearLayout>

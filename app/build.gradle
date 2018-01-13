@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+def VUFORIA_SDK_DIR = '../../..'
+def NATIVE_LIB_DIR = 'build/lib'
+def JAR_DIR = 'build/java/vuforia'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion '26'
+
+    sourceSets.main {
+        jni.srcDirs = []
+        jniLibs.srcDir "$VUFORIA_SDK_DIR/$NATIVE_LIB_DIR/"
+    }
+
+    defaultConfig {
+        applicationId "com.vuforia.samples.VuforiaSamples"
+        minSdkVersion 9
+        targetSdkVersion 22
+        versionCode 600
+        versionName "6.0"
+    }
+
+    archivesBaseName = rootProject.projectDir.getName()
+	
+    buildTypes {
+        release {
+            minifyEnabled false
+            ndk {
+                abiFilters "armeabi-v7a"
+            }
+        }
+        debug {
+            minifyEnabled false
+            debuggable true
+            ndk {
+                abiFilters "armeabi-v7a"
+            }
+        }
+    }
+}
+
+dependencies {
+    compile files('Vuforia.jar')
+
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.3.4'
+    implementation 'com.android.support:appcompat-v7:22.2.1'
+}

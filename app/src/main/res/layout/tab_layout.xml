@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="left"
+
+    android:background="@color/colorTabBack">
+
+  <!--  <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="menu"/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="10dp">
+        <Button
+            android:id="@+id/tab_comment"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text="Comment"
+            android:layout_gravity="bottom"
+            android:background="@color/colorComent"/>
+        <Button
+            android:id="@+id/tab_ditail"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text="Ditail"
+            android:background="@color/colorDitail"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+
+</LinearLayout>

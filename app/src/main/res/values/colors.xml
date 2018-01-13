@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#575757</color>
+    <color name="light_gray">#D3D3D3</color>
+    <color name="semi_transparent_black">#C8000000</color>
+    <color name="transparent">#00000000</color>
+    
+    <color name="overlay_bottom_bar_separators">#333333</color>
+    <color name="overlay_bottom_bar_background">#1E1E1E</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorSkyblue">#87ceeb</color>
+    <color name="colorOrengi">#ff8c00</color>
+    <color name="colorAlphaGray">#10000000</color>
+    <color name="colorAlphaOrengi">#80FF8C00</color>
+
+    <!--Step2-->
+    <color name="colorComent">#99ccff</color>
+    <color name="colorDitail">#ffcc66</color>
+    <color name="colorTabBack">#339900</color>
+    <color name="colorDisableCmtBack">#334600</color>
+    <color name="White">#ffffff</color>
+    <color name="Bule">#0000FF</color>
+</resources>

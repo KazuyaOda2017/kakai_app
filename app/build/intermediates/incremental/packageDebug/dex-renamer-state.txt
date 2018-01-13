@@ -1,0 +1,7 @@
+#Sat Aug 19 18:24:49 JST 2017
+base.0=C\:\\Users\\M.Nakano\\AndroidStudioProjects\\VuforiaSamples-6-2-10\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_75f3a6ff7f50a0257b1f011c601b1e174090d235
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\M.Nakano\\AndroidStudioProjects\\VuforiaSamples-6-2-10\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_63a38727f856c2a54074df083f56355ab71a7539\\classes.dex
+base.1=C\:\\Users\\M.Nakano\\AndroidStudioProjects\\VuforiaSamples-6-2-10\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_63a38727f856c2a54074df083f56355ab71a7539
+file.0=C\:\\Users\\M.Nakano\\AndroidStudioProjects\\VuforiaSamples-6-2-10\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_75f3a6ff7f50a0257b1f011c601b1e174090d235\\classes.dex

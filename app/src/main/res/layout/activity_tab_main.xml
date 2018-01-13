@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.vuforia.samples.VuforiaSamples.ui.ActivityList.ActivityTabMain"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:id="@+id/main_layout"
+    >
+
+    <!--タブをインクルードする-->
+    <include layout="@layout/tab_layout" android:id="@+id/tab"
+        android:visibility="visible"/>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+
+        android:background="@color/colorTabBack">
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="menu"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="-7dp"
+            android:layout_marginLeft="10dp">
+            <Button
+                android:id="@+id/tab_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Comment"
+                android:layout_gravity="bottom"
+                android:background="@color/colorComent"/>
+            <Button
+                android:id="@+id/tab_ditail"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Ditail"
+                android:background="@color/colorDitail"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+    </LinearLayout>-->
+
+    <android.support.v4.view.ViewPager
+
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <!--Pagerタイトルバーを出さないようにする
+        <android.support.v4.view.PagerTitleStrip
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="#CCCCCC"
+            android:textColor="#000000"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>-->
+    </android.support.v4.view.ViewPager>
+</LinearLayout>

@@ -1,0 +1,52 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\K.Oda\\AndroidStudioProjects\\kakai2017\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v13\\values-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\K.Oda\\AndroidStudioProjects\\kakai2017\\app\\src\\main\\res\\values-v13\\styles.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "118",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "349"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "283"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\K.Oda\\AndroidStudioProjects\\kakai_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v13\\values-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\K.Oda\\AndroidStudioProjects\\kakai_app\\app\\src\\main\\res\\values-v13\\styles.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "118",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "349"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "283"
+                    }
+                }
+            ]
+        }
+    ]
+}

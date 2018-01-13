@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorComent"
+    android:weightSum="1"
+    android:focusableInTouchMode="true">
+    <!--<ScrollView
+        android:id="@+id/scrollView_comment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.00"
+        android:layout_gravity="top"
+        >
+        <LinearLayout
+            android:id="@+id/comment_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            &lt;!&ndash;ここにコメントを追加していく&ndash;&gt;
+
+        </LinearLayout>
+    </ScrollView>-->
+    <!--商品情報カードをインクルード
+    <include layout="@layout/product_card" android:id="@+id/productCard"/>-->
+    <com.vuforia.samples.VuforiaSamples.ui.CustomView.ContentsCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/productCard"></com.vuforia.samples.VuforiaSamples.ui.CustomView.ContentsCardView>
+
+    <!--くるくるリロード-->
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.00">
+        <!-- コメントを追加するリストView-->
+        <ListView
+            android:layout_width="match_parent"
+
+            android:layout_gravity="top"
+            android:id="@+id/comment_list"
+            android:padding="10dp"
+            android:layout_height="match_parent">
+
+        </ListView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <!--コメントを追加する-->
+    <!--  <LinearLayout
+              android:id="@+id/comment_line"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1.00"
+          android:layout_gravity="top"
+              android:orientation="vertical">
+
+
+          </LinearLayout>-->
+
+    <!--テキスト入力エリア
+    <include layout="@layout/comment_input_area" android:id="@+id/input_area"/>-->
+    <!--テキスト入力エリアのカスタムView-->
+    <com.vuforia.samples.VuforiaSamples.ui.CustomView.CmtInputView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/input_area"></com.vuforia.samples.VuforiaSamples.ui.CustomView.CmtInputView>
+
+</LinearLayout>

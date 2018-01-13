@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="top"
+    android:orientation="vertical">
+
+<com.vuforia.samples.VuforiaSamples.ui.CustomView.ContentsCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ContentTable"></com.vuforia.samples.VuforiaSamples.ui.CustomView.ContentsCardView>
+
+        <!--<TableLayout-->
+            <!--android:id="@+id/TableLayout1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:stretchColumns="1"-->
+            <!--android:background="#000000">-->
+
+        <!--</TableLayout>-->
+
+
+</RelativeLayout>

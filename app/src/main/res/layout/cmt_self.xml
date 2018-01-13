@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="right"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginRight="30dp"
+
+    >
+
+
+    <!--user情報を表示-->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:layout_gravity="right"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical">
+
+        <!--評価ボタン-->
+        <com.vuforia.samples.VuforiaSamples.ui.CustomView.EvaluationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/stars_mini">
+
+        </com.vuforia.samples.VuforiaSamples.ui.CustomView.EvaluationView>
+        <!--<include
+
+            android:id="@+id/stars_mini"
+            layout="@layout/starmini_layout"
+            />-->
+        <!--   <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_margin="7dp"
+               android:id="@+id/starsmini_line2"
+               >
+
+           </LinearLayout>
+   -->
+        <TextView
+            android:gravity="right"
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:gravity="right"
+            android:id="@+id/insert_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="10sp"/>
+    </LinearLayout>
+    <!--コメントを表示-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+
+        >
+
+        <TextView
+            android:id="@+id/cmt"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_balloon"
+            android:maxWidth="200dp"
+            android:minHeight="60dp"
+            android:padding="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+        <!--◆を重ねる-->
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginLeft="-6dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/White"
+            android:rotation="45" />
+
+    </LinearLayout>
+</LinearLayout>

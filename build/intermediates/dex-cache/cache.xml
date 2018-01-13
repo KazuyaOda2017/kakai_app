@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\M.Nakano\AndroidStudioProjects\VuforiaSamples-6-2-10\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\M.Nakano\AndroidStudioProjects\VuforiaSamples-6-2-10\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_75f3a6ff7f50a0257b1f011c601b1e174090d235\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\M.Nakano\AndroidStudioProjects\VuforiaSamples-6-2-10\app\Vuforia.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="177fc09d70ae5f94117c9ea1a7b3bec42c9d48b4">
+        <dex dex="C:\Users\M.Nakano\AndroidStudioProjects\VuforiaSamples-6-2-10\app\build\intermediates\transforms\dex\debug\folders\1000\2\Vuforia_c35c06bf5650d9f4388502218e2e688a1a4dc671\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\M.Nakano\AndroidStudioProjects\VuforiaSamples-6-2-10\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="f9667f2a84a9d1b9598645cd0815b91a98399e7e">
+        <dex dex="C:\Users\M.Nakano\AndroidStudioProjects\VuforiaSamples-6-2-10\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_63a38727f856c2a54074df083f56355ab71a7539\classes.dex" />
+    </item>
+
+</items>

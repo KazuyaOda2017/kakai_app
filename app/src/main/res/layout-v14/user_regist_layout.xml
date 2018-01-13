@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorComent"
+    android:columnCount="2">
+    <TextView
+        android:id="@+id/title_userregist"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/user_regist"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_rowWeight="1"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="2"
+
+        android:layout_columnSpan="2"
+        android:layout_row="1"
+        android:gravity="center"
+        >
+        <EditText
+            android:id="@+id/edittext_username"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/userName"
+            android:gravity="center"
+            android:layout_column="0"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_row="2"
+        android:layout_column="0"
+        android:layout_gravity="left"
+        android:text="性別"
+        android:textSize="20sp"
+        android:layout_marginLeft="15dp"
+        android:textColor="@android:color/black"
+        />
+    <RadioGroup
+        android:id="@+id/radiogroup_sex"
+        android:layout_rowWeight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_row="3"
+        android:layout_columnSpan="2"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        >
+        <RadioButton
+            android:id="@+id/radiobtn_man"
+            android:tag="0"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="男"
+            android:textSize="25dp"
+
+            />
+        <RadioButton
+            android:id="@+id/radiobtn_woman"
+            android:tag="1"
+            android:layout_column="1"
+            android:layout_row="3"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="女"
+            android:textSize="25dp"/>
+
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_rowWeight="2"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_column="0"
+        android:layout_row="4"
+        android:gravity="center"
+        android:layout_columnSpan="2">
+        <Button
+            android:id="@+id/submit_userInfoBtn"
+            android:gravity="center"
+            android:layout_height="60dp"
+            android:layout_width="200dp"
+            android:text="送信"
+            android:textSize="25sp"/>
+    </LinearLayout>
+
+
+
+
+</GridLayout>
