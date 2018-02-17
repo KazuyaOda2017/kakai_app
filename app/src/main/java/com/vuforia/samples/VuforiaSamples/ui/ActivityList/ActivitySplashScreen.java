@@ -30,9 +30,9 @@ import com.vuforia.samples.VuforiaSamples.ui.Common.UserInfo;
 public class ActivitySplashScreen extends Activity
 {
     
-    private static long SPLASH_MILLIS = 450;
-    
-    
+    private static long SPLASH_MILLIS = 1000;
+
+    private static final int RESULTCODE = 1;
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
@@ -80,11 +80,24 @@ public class ActivitySplashScreen extends Activity
                 //登録画面に遷移する
                 intent = new Intent(ActivitySplashScreen.this,ActivityUserRegister.class);
 
-                startActivity(intent);
-                
+                //startActivity(intent);
+
+
+                startActivityForResult(intent, RESULTCODE);
+
+                overridePendingTransition(R.anim.in_right,R.anim.out_left);
+
+
             }
             
         }, SPLASH_MILLIS);
     }
-    
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == RESULTCODE) {
+            if (resultCode == RESULT_OK) {
+            }
+        }
+    }
+
 }

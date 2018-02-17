@@ -77,7 +77,7 @@ public class ContentsDitalFragment extends Fragment {
         LinearLayout ditaileLine = (LinearLayout)layout.findViewById(R.id.contents_ditail);
 
         //詳細情報分Viewを追加
-        for(Map.Entry<String,String> e : UserInfo.getInstance().getProductInfoMap().entrySet()){
+     /*   for(Map.Entry<String,String> e : UserInfo.getInstance().getProductInfoMap().entrySet()){
 
 
             if(e.getKey().equals("写真"))continue;
@@ -87,7 +87,16 @@ public class ContentsDitalFragment extends Fragment {
 
             ditaileLine.addView(ditailView);
 
-        }
+        }*/
+     for(String key:UserInfo.getInstance().getIndexList()){
+
+         String value = UserInfo.getInstance().getProductInfoMap().get(key);
+
+         DitailView ditailView = new DitailView(this.getActivity().getApplicationContext(),null);
+         ditailView.setText(key,value);
+
+         ditaileLine.addView(ditailView);
+     }
 
         return layout;
     }

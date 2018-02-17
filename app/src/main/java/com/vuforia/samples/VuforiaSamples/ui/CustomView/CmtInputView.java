@@ -93,6 +93,9 @@ public class CmtInputView extends LinearLayout{
 
                 cInfo.userId = UserInfo.getInstance().getUserId();
                 cInfo.sex = UserInfo.getInstance().getSex();
+
+                //マーカーID
+                cInfo.markerId = Integer.parseInt(UserInfo.getInstance().getProductInfoMap().get("MarkerID"));
                 //日付を取得
                 Date date = new Date();
                 SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy/MM/dd HH:mm");
@@ -153,6 +156,14 @@ public class CmtInputView extends LinearLayout{
         }
     }
 
+    public void setText(String text){
+        try{
+            editText.setText(text);
+        }catch (Exception e){
+
+        }
+    }
+
     /**
      * 有効/無効の設定
      * @param value
@@ -162,6 +173,11 @@ public class CmtInputView extends LinearLayout{
     public void setEnabled(boolean value){
 
         //入力エリア
+        //初期化
+        evaluationView.changeStarState(2);
+        //入力内容をクリア
+        editText.setText("");
+
         editText.setEnabled(value);
         //背景色
         GradientDrawable drawable = new GradientDrawable();
@@ -177,6 +193,7 @@ public class CmtInputView extends LinearLayout{
 
         //評価ボタン
         evaluationView.setEnabled(value);
+
     }
 
     public void setOnCallBack(CallBackTask _cbj){

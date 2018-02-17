@@ -28,7 +28,9 @@ public class CmtDataList {
 
     public class TComment{
 
-        public int markerId;
+       // public int markerId;
+
+        public  String userName;
 
         public String userId;
 
@@ -36,15 +38,17 @@ public class CmtDataList {
 
         public double star;
 
-        public  String commentId;
+        public Integer sex;
 
-        public boolean displayFlg;
+        //public  String commentId;
 
-        public boolean deleteFlg;
+      //  public boolean displayFlg;
+
+        //public boolean deleteFlg;
 
         public String insertDate;
 
-        public String updateDate;
+      //  public String updateDate;
 /*
         "commentId":null
                 "markerId":null

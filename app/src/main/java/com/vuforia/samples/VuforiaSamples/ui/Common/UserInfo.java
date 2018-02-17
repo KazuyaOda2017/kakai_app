@@ -31,6 +31,9 @@ public class UserInfo implements Serializable {
     public void addProductInfo(String key,String value){
         this.productInfoMap.put(key,value);
     }
+
+     private String[] indexList;
+    public String[] getIndexList(){return indexList;}
     //endregion
 
 
@@ -52,10 +55,10 @@ public class UserInfo implements Serializable {
 
         try{
 
-            String[] indexlist = productInfo.indexInfo.split(",",0);
+            this.indexList = productInfo.indexInfo.split(",",0);
 
             //商品名
-            addProductInfo(indexlist[0],productInfo.contentsName);
+            addProductInfo(indexList[0],productInfo.contentsName);
 
             //商品画像
             addProductInfo("写真",String.format("%s%s","http://192.168.0.150/privateWebDav/Root/image/",productInfo.image));
@@ -64,14 +67,14 @@ public class UserInfo implements Serializable {
             addProductInfo("MarkerID",String.valueOf(productInfo.markerId));
 
             //キャッチコピー
-            addProductInfo(indexlist[1],productInfo.description);
+            addProductInfo(indexList[1],productInfo.description);
 
             //リストの３列目からは詳細データ
             //詳細
             String[] values = productInfo.dtlInfo.split(",",-1);
             //項目分ループする
-            for(int i = 2,j = 0; i < indexlist.length;i++,j++){
-                addProductInfo(indexlist[i],values[j]);
+            for(int i = 2,j = 0; i < indexList.length;i++,j++){
+                addProductInfo(indexList[i],values[j]);
             }
 
 

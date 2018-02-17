@@ -18,17 +18,17 @@ public class CommentInfo {
 
   //  public String insertDate;
 
-    public int commentId;
+   // public int commentId;
 
     public int markerId;
 
-    public boolean displayFlg;
+    //public boolean displayFlg;
 
-    public boolean deleteFlg;
+    //public boolean deleteFlg;
 
-    public int insertDate;
+    public String insertDate;
 
-    public int updateDate;
+   // public int updateDate;
 
     /*
     "commentId":3

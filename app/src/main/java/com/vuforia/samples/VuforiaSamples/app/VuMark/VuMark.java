@@ -41,6 +41,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.vuforia.CameraDevice;
@@ -64,6 +65,7 @@ import com.vuforia.samples.VuforiaSamples.R;
 import com.vuforia.samples.VuforiaSamples.ui.ActivityList.ActivitySplashScreen;
 import com.vuforia.samples.VuforiaSamples.ui.ActivityList.ActivityTabMain;
 import com.vuforia.samples.VuforiaSamples.ui.ActivityList.ActivityUserRegister;
+import com.vuforia.samples.VuforiaSamples.ui.Common.CmtDataList;
 import com.vuforia.samples.VuforiaSamples.ui.Common.CommentInfo;
 import com.vuforia.samples.VuforiaSamples.ui.Common.ConvertJson;
 import com.vuforia.samples.VuforiaSamples.ui.Common.HttpRequest;
@@ -76,6 +78,7 @@ import com.vuforia.samples.VuforiaSamples.ui.SampleAppMenu.SampleAppMenuGroup;
 import com.vuforia.samples.VuforiaSamples.ui.SampleAppMenu.SampleAppMenuInterface;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Vector;
@@ -382,6 +385,30 @@ public class VuMark extends Activity implements SampleApplicationControl,
             @Override
             public void SabmitCallBack(int result, CommentInfo cInfo) {
 
+                //コメント送信処理
+                //コメントを追加する
+                //コメントデータをシリアライズ
+                final String requestStr = ConvertJson.SerializeJson(cInfo);
+                //HttpRequest
+                HttpRequest httpRequest = new HttpRequest(HttpRequest.EDIT_COMMENT,requestStr,null);
+                Uri.Builder builder = new Uri.Builder();
+                httpRequest.progressType = HttpRequest.ProgressType.NOPROGRESS;
+                httpRequest.execute(builder);
+                httpRequest.setOnCallBack(new HttpRequest.CallBackTask() {
+                    @Override
+                    public void CallBack(String result) {
+
+
+                        if(result.equals("0")){
+                            getCmtInfo();
+
+                            showToast("Success");
+                        }else {
+                            //失敗時の処理
+                        }
+                    }
+                });
+
             }
         });
 
@@ -400,6 +427,10 @@ public class VuMark extends Activity implements SampleApplicationControl,
             }
         });
         
+    }
+
+    private void showToast(String text){
+        Toast.makeText(this,text,Toast.LENGTH_SHORT).show();
     }
 
     /**
@@ -474,6 +505,9 @@ public class VuMark extends Activity implements SampleApplicationControl,
                             _viewCard.bringToFront();
                             _viewCard.setVisibility(View.VISIBLE);
                             _viewCard.startAnimation(bottomUp);
+
+                            //コメント情報取得
+                            getCmtInfo();
                         }
                     });
 
@@ -485,6 +519,46 @@ public class VuMark extends Activity implements SampleApplicationControl,
 
             }
         });
+    }
+
+    private void getCmtInfo(){
+        try{
+
+            CmtDataList cmtdata = new CmtDataList();
+            cmtdata.userId = UserInfo.getInstance().getUserId();
+            cmtdata.markerId = Integer.parseInt(UserInfo.getInstance().getProductInfoMap().get("MarkerID"));
+            cmtdata.offset = 0;
+
+            final String requestStr = ConvertJson.SerializeJson(cmtdata);
+
+            //HttpRequest
+            HttpRequest httpRequest = new HttpRequest(HttpRequest.SELECT_COMMENT,requestStr,null);
+            Uri.Builder builder = new Uri.Builder();
+            httpRequest.progressType = HttpRequest.ProgressType.NOPROGRESS;
+            httpRequest.execute(builder);
+            httpRequest.setOnCallBack(new HttpRequest.CallBackTask() {
+                @Override
+                public void CallBack(String result) {
+
+                    String commentjsonStr = result;//"{\"dispList\":[{\"insertDate\":\"2017.11.25\",\"sex\":0,\"star\":5,\"userCmt\":\"美味しかった\",\"userId\":1,\"userName\":\"小田\"},{\"insertDate\":\"2017.12.1\",\"sex\":0,\"star\":3,\"userCmt\":\"苦かった\",\"userId\":2,\"userName\":\"田中\"},{\"insertDate\":\"2017.12.5\",\"sex\":0,\"star\":2,\"userCmt\":\"いまいち\",\"userId\":3,\"userName\":\"中橋\"},{\"insertDate\":\"2017.12.4\",\"sex\":0,\"star\":4,\"userCmt\":\"また来ます\",\"userId\":4,\"userName\":\"中野\"},{\"insertDate\":\"2017.12.5\",\"sex\":1,\"star\":1,\"userCmt\":\"まぁまぁ\",\"userId\":5,\"userName\":\"溝辺\"}],\"offset\":0,\"totalNumber\":5}";
+                    //Json文字列をデシリアライズ
+
+                    CmtDataList _commentData = ConvertJson.DeserializeJsonToCmtDataList(commentjsonStr);
+
+                    //自分のコメントがあったらテキストボックスに文字を入れる
+                    if( _commentData.userComment.userId != null){
+
+                        //コメント
+                        _cmtInputView.setText(_commentData.userComment.userCmt);
+                        //評価
+                        _cmtInputView.setStar((int)_commentData.userComment.star - 1);
+                    }
+
+                }
+            });
+
+        }catch (Exception e) {
+        }
     }
 
     /**

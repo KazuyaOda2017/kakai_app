@@ -76,6 +76,7 @@ public class CommentListAdapter extends ArrayAdapter<CommentInfo>{
             evaluationView.setImageSize(15);
             evaluationView.setGravity(gravity);
             evaluationView.changeStarState((int)info.star - 1);
+            evaluationView.setCallBackState(EvaluationView.CallBackState.OFF);
             evaluationView.setMargin(0,0,0,0);
 
                    /* ViewGroup vg = (ViewGroup)convertView.findViewById(R.id.stars_mini);

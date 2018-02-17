@@ -21,6 +21,8 @@ public final class R {
     public static final int abc_slide_out_top=0x7f010009;
     public static final int bottom_down=0x7f01000a;
     public static final int bottom_up=0x7f01000b;
+    public static final int in_right=0x7f01000c;
+    public static final int out_left=0x7f01000d;
   }
   public static final class array {
     public static final int read_text_test1=0x7f020000;
@@ -1779,14 +1781,15 @@ public final class R {
     public static final int reticle=0x7f070058;
     public static final int round_bg=0x7f070059;
     public static final int scanline=0x7f07005a;
-    public static final int star_disable=0x7f07005b;
-    public static final int star_image=0x7f07005c;
-    public static final int star_off=0x7f07005d;
-    public static final int star_on=0x7f07005e;
-    public static final int submit=0x7f07005f;
-    public static final int submit_off=0x7f070060;
-    public static final int submitbtn=0x7f070061;
-    public static final int vuforia_splash=0x7f070062;
+    public static final int sprush_force=0x7f07005b;
+    public static final int star_disable=0x7f07005c;
+    public static final int star_image=0x7f07005d;
+    public static final int star_off=0x7f07005e;
+    public static final int star_on=0x7f07005f;
+    public static final int submit=0x7f070060;
+    public static final int submit_off=0x7f070061;
+    public static final int submitbtn=0x7f070062;
+    public static final int vuforia_splash=0x7f070063;
   }
   public static final class id {
     public static final int ContentTable=0x7f080000;
